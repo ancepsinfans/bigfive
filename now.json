@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "env": {
+    "MONGODB_URI": "mongodb://ancepsinfans:ifBfw32bCX5HKpVi@bigfive-mvp.cto5h.mongodb.net/resultsDatabase",
+    "MONGODB_COLLECTION": "results",
+    "BASE_URL": "bigfive-ochre.vercel.app"
+  },
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {
+      }
+    },
+    {
+      "src": "api/*.js",
+      "use": "@now/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/result/:id",
+      "destination": "/api/result.js"
+    },
+    {
+      "source": "/api/compare/:id",
+      "destination": "/api/compare.js"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1.js"
+    },
+    {
+      "source": "/service-worker.js",
+      "destination": "/sw.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers" : [
+        {
+          "key" : "Access-Control-Allow-Origin",
+          "value" : "*"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Accept, Access-Control-Request-Headers, Access-Control-Request-Method, Authorization, Content-Type, Last-Modified, Origin, X-FusionAuth-TenantId, X-Requested-With"
+        }
+      ]
+    }
+  ]
+}
