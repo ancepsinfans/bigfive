@@ -1,4 +1,5 @@
 export default {
+  mode: 'universal',
   components: true,
   /*
   ** Headers of the page
@@ -50,6 +51,9 @@ export default {
     // { src: '~/plugins/apexcharts', mode: 'client' },
     { src: '~/plugins/confetti', mode: 'client' }
   ],
+  // router: {
+  //   middleware: ['18n']
+  // },
   /*
   ** Nuxt.js dev-modules
   */
@@ -66,7 +70,6 @@ export default {
     optimizeImages: true
   },
   modules: [
-    '@nuxt/content',
     '@nuxtjs/axios',
     'nuxt-webfontloader',
     '@nuxtjs/pwa',
@@ -111,122 +114,20 @@ export default {
             dir: 'ltr'
           },
           {
-            name: 'Finnish',
-            code: 'fi',
-            iso: 'fi',
-            file: 'fi.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Spanish',
-            code: 'es',
-            iso: 'es',
-            file: 'es.js',
-            dir: 'ltr'
-          },
-          {
             name: 'English',
             code: 'en',
             iso: 'en-US',
             file: 'en-US.js',
             dir: 'ltr'
-          },
-          {
-            name: 'Hindi',
-            code: 'hi',
-            iso: 'hi',
-            file: 'hi.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'French',
-            code: 'fr',
-            iso: 'fr',
-            file: 'fr.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Russian',
-            code: 'ru',
-            iso: 'ru',
-            file: 'ru.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Chinese',
-            code: 'zh-Hans',
-            iso: 'zh-Hans',
-            file: 'zh-Hans.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Bahasa Indonesia',
-            code: 'id',
-            iso: 'id',
-            file: 'id.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Ukrainian',
-            code: 'uk',
-            iso: 'uk',
-            file: 'uk.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Japanese',
-            code: 'ja',
-            iso: 'ja',
-            file: 'ja.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Polish',
-            code: 'pl',
-            iso: 'pl',
-            file: 'pl.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Brazilian Portuguese',
-            code: 'pt',
-            iso: 'pt-br',
-            file: 'pt-BR.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Italian',
-            code: 'it',
-            iso: 'it',
-            file: 'it.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Icelandic',
-            code: 'is',
-            iso: 'is',
-            file: 'is.js',
-            dir: 'ltr'
-          },
-          {
-            name: 'Thai',
-            code: 'th',
-            iso: 'th',
-            file: 'th.js',
-            dir: 'ltr'
           }
         ],
         seo: true,
-        baseUrl: 'bigfive-ochre.vercel.app',
+        baseUrl: 'https://bigfive-ochre.vercel.app',
         defaultLocale: 'en',
         strategy: 'prefix_except_default',
         lazy: true,
         langDir: 'translations/',
-        detectBrowserLanguage: {
-          onlyOnRoot: true,
-          useCookie: true,
-          fallbackLocale: 'en'
-        }
+        detectBrowserLanguage: false
       }
     ],
     '@nuxtjs/sitemap',
@@ -253,7 +154,7 @@ export default {
   axios: {
   },
   sitemap: {
-    hostname: 'https://bigfive-test.com'
+    hostname: 'https://bigfive-ochre.vercel.app'
   },
   webfontloader: {
     google: {
@@ -290,7 +191,7 @@ export default {
     }
   },
   env: {
-    API_URL: 'bigfive-ochre.vercel.app/api/' // TODO: Fix for dev environment
+    API_URL: 'https://bigfive-ochre.vercel.app/api/' // TODO: Fix for dev environment
   },
   build: {
     extractCSS: true,
