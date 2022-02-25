@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "scope": "ancepsinfans",
-  "alias": ["bigfive-ochre.vercel.app"],
   "env": {
     "MONGODB_URI": "mongodb://ancepsinfans:ifBfw32bCX5HKpVi@bigfive-mvp.cto5h.mongodb.net/resultsDatabase",
     "MONGODB_COLLECTION": "results",
