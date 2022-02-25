@@ -5,7 +5,7 @@
   "env": {
     "MONGODB_URI": "mongodb://ancepsinfans:ifBfw32bCX5HKpVi@bigfive-mvp.cto5h.mongodb.net/resultsDatabase",
     "MONGODB_COLLECTION": "results",
-    "BASE_URL": "bigfive-ochre.vercel.app"
+    "BASE_URL": "https://bigfive-ochre.vercel.app"
   },
   "builds": [
     {
