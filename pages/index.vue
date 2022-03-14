@@ -52,25 +52,7 @@
         </v-col>
       </v-row>
     </Wrapper>
-    <Wrapper background="#e4e4e4">
-      <v-row
-        cols="12"
-        class="py-10"
-      >
-        <v-col
-          class="text-center"
-          cols="12"
-        >
-          <h1
-            class="font-italic"
-            v-html="$t('frontpage.tests_taken')"
-          />
-        </v-col>
-        <v-col>
-          <Highlights />
-        </v-col>
-      </v-row>
-    </Wrapper>
+
     <Wrapper background="white">
       <v-row
         cols="12"
@@ -126,18 +108,7 @@
           </p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col
-          class="text-center"
-          cols="12"
-        >
-          <h2
-            style="color: #797878"
-            v-html="$t('frontpage.share')"
-          />
-          <ShareLinks />
-        </v-col>
-      </v-row>
+
     </Wrapper>
   </div>
 </template>

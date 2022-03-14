@@ -15,47 +15,6 @@
         FAQ
       </nuxt-link> first.
     </p>
-    <h1>Team</h1>
-
-    <v-container class="my-5">
-      <v-layout
-        row
-        wrap
-      >
-        <v-flex
-          v-for="person in team"
-          :key="person.name"
-          xs12
-          sm12
-          md6
-          lg4
-        >
-          <v-card
-            flat
-            class="text-xs-center ma-3"
-          >
-            <v-img
-              :src="person.avatar"
-              color="#eeeeee"
-            />
-            <v-card-text>
-              <div class="subheading">
-                {{ person.name }}
-              </div>
-              <div class="grey--text">
-                {{ person.role }}
-              </div>
-              <a
-                :href="person.github"
-                target="_blank"
-              >
-                <v-icon>{{ mdiGithub }}</v-icon>
-              </a>
-            </v-card-text>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
   </div>
 </template>
 
